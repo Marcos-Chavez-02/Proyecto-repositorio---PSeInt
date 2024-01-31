@@ -1,0 +1,91 @@
+Algoritmo sin_titulo
+	Definir wao Como Real
+	definir di, ci, ap, cel Como Entero
+	Definir sexo Como Caracter
+	definir des, mas, tol, est Como Real
+	
+	wao <- 30
+	Repetir
+		Escribir "Ingresa tu edad: "
+		Leer edad
+	Hasta Que edad >= 0 y edad <= 90
+	
+	Repetir
+		Escribir "Ingrese tu sexo: "
+		Escribir "[M] Masculino "
+		Escribir "[F] Femenino "
+		Leer sexo
+	Hasta Que sexo = "M" o sexo = "F"
+	
+	Repetir
+		Escribir "Ingrese tu apellido: "
+		Escribir "[1] A - D "
+		Escribir "[2] E - L "
+		Escribir "[3] M - P "
+		Escribir "[4] Q - T "
+		Escribir "[5] U - W "
+		Escribir "[6] X - Z "
+		Leer ape
+	Hasta Que ape >= 1 y ape <= 6
+	
+	Repetir
+		Escribir "Ingrese tu Numero de cedula a digito: "
+		Escribir "[1] 0 - 1 "
+		Escribir "[2] 2 - 3 "
+		Escribir "[3] 4 - 5 "
+		Escribir "[4] 6 - 7 "
+		Escribir "[5] 8 "
+		Escribir "[6] 9 "
+		Leer ced
+	Hasta Que ced >= 1 y ced <= 6
+	
+	Repetir
+		Escribir "Ingrese tu estatura: "
+		Leer estatura
+	Hasta Que estatura >= 0 
+	
+	Repetir
+		Escribir "Ingrese dia de la semana  "
+		Escribir "[1] Lunes "
+		Escribir "[2] Martes "
+		Escribir "[3] Miercoles "
+		Escribir "[4] Jueves "
+		Escribir "[5] Viernes "
+		Escribir "[6] Sabado "
+		Escribir "[7] Domingo "
+		Leer dia
+	Hasta Que dia >= 1 y dia <= 7
+	
+	des <- 0
+	si edad >= 0 y edad <= 10 y sexo = "M" y ape = 1 y ced = 1 y estatura >= 1 y estatura <= 1.20 y  dia = 1 Entonces
+		des <- 0.20
+	FinSi
+	
+	si edad >= 11 y edad <= 20 y sexo = "F" y ape = 2 y ced = 2 y estatura >= 1.21 y estatura <= 1.35 y  dia = 2 Entonces
+		des <- 0.50
+	FinSi
+	
+	si edad >= 21 y edad <= 50 y sexo = "M" y ape = 3 y ced = 3 y estatura >= 1.36 y estatura <= 1.60 y  (dia = 3 O di = 4) Entonces
+		des <- 0.30
+	FinSi
+	
+	si edad >= 51 y edad <= 60 y sexo = "F" y ape = 4 y ced = 4 y estatura >= 1.61 y estatura <= 1.70 y  di = 5 Entonces
+		des <- 0.40
+	FinSi
+	
+	si edad >= 61 y edad <= 70 y sexo = "M" y ape = 5 y ced = 5 y estatura >= 1.71 y estatura <= 1.81 y  di = 6 Entonces
+		des <- 0.02
+	FinSi
+	
+	si edad >= 71 y edad <= 80 y sexo = "F" y ape = 6 y ced = 6 y estatura >= 1.82 y  di = 7 Entonces
+		des <- 0.05
+	FinSi
+	
+	mas <- wao * des
+	tol <- wao - mas
+	
+	escribir "Precio regula: S/ ", wao
+	escribir "El porcentaje de descuento es: ", des * 100, "%"
+	escribir "El descuento es: S/ ", mas
+	escribir "El costo final es: S/ ", tol
+FinAlgoritmo
